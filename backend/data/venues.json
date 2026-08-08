@@ -1,0 +1,142 @@
+[
+  {
+    "_id": "200000000000000000000001",
+    "name": "Grand Hall",
+    "city": "Amman",
+    "address": "101 Grand Street",
+    "capacity": 1000
+  },
+  {
+    "_id": "200000000000000000000002",
+    "name": "Riverside Arena",
+    "city": "Dubai",
+    "address": "102 Riverside Street",
+    "capacity": 80
+  },
+  {
+    "_id": "200000000000000000000003",
+    "name": "Skyline Center",
+    "city": "New York",
+    "address": "103 Skyline Street",
+    "capacity": 50
+  },
+  {
+    "_id": "200000000000000000000004",
+    "name": "The Pavilion",
+    "city": "London",
+    "address": "104 The Street",
+    "capacity": 200
+  },
+  {
+    "_id": "200000000000000000000005",
+    "name": "Metro Convention Hall",
+    "city": "Berlin",
+    "address": "105 Metro Street",
+    "capacity": 150
+  },
+  {
+    "_id": "200000000000000000000006",
+    "name": "Sunset Amphitheater",
+    "city": "Toronto",
+    "address": "106 Sunset Street",
+    "capacity": 150
+  },
+  {
+    "_id": "200000000000000000000007",
+    "name": "Oakwood Auditorium",
+    "city": "Sydney",
+    "address": "107 Oakwood Street",
+    "capacity": 100
+  },
+  {
+    "_id": "200000000000000000000008",
+    "name": "Harbor View Hall",
+    "city": "Tokyo",
+    "address": "108 Harbor Street",
+    "capacity": 80
+  },
+  {
+    "_id": "200000000000000000000009",
+    "name": "Downtown Expo Center",
+    "city": "Paris",
+    "address": "109 Downtown Street",
+    "capacity": 1000
+  },
+  {
+    "_id": "200000000000000000000010",
+    "name": "Crystal Ballroom",
+    "city": "Cairo",
+    "address": "110 Crystal Street",
+    "capacity": 500
+  },
+  {
+    "_id": "200000000000000000000011",
+    "name": "The Forum",
+    "city": "Istanbul",
+    "address": "111 The Street",
+    "capacity": 80
+  },
+  {
+    "_id": "200000000000000000000012",
+    "name": "Maple Leaf Hall",
+    "city": "Singapore",
+    "address": "112 Maple Street",
+    "capacity": 750
+  },
+  {
+    "_id": "200000000000000000000013",
+    "name": "Central Stadium",
+    "city": "Chicago",
+    "address": "113 Central Street",
+    "capacity": 300
+  },
+  {
+    "_id": "200000000000000000000014",
+    "name": "Lakeside Pavilion",
+    "city": "Madrid",
+    "address": "114 Lakeside Street",
+    "capacity": 50
+  },
+  {
+    "_id": "200000000000000000000015",
+    "name": "Union Square Hall",
+    "city": "Rome",
+    "address": "115 Union Street",
+    "capacity": 50
+  },
+  {
+    "_id": "200000000000000000000016",
+    "name": "Northgate Arena",
+    "city": "Vienna",
+    "address": "116 Northgate Street",
+    "capacity": 80
+  },
+  {
+    "_id": "200000000000000000000017",
+    "name": "Silver Dome",
+    "city": "Amsterdam",
+    "address": "117 Silver Street",
+    "capacity": 150
+  },
+  {
+    "_id": "200000000000000000000018",
+    "name": "Heritage Theater",
+    "city": "Doha",
+    "address": "118 Heritage Street",
+    "capacity": 150
+  },
+  {
+    "_id": "200000000000000000000019",
+    "name": "Bayview Convention Center",
+    "city": "Riyadh",
+    "address": "119 Bayview Street",
+    "capacity": 500
+  },
+  {
+    "_id": "200000000000000000000020",
+    "name": "Pinecrest Hall",
+    "city": "Beirut",
+    "address": "120 Pinecrest Street",
+    "capacity": 750
+  }
+]

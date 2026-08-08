@@ -1,0 +1,325 @@
+[
+  {
+    "_id": "300000000000000000000001",
+    "title": "Tech Innovators Summit",
+    "description": "An unforgettable evening filled with entertainment and connection.",
+    "startsAt": "2026-12-01T15:00:00.000Z",
+    "price": 50,
+    "venue": "200000000000000000000001",
+    "organizer": "100000000000000000000004",
+    "categories": [
+      "sports"
+    ]
+  },
+  {
+    "_id": "300000000000000000000002",
+    "title": "Live Jazz Night",
+    "description": "Celebrate culture and talent with performers from around the world.",
+    "startsAt": "2026-12-13T19:00:00.000Z",
+    "price": 35,
+    "venue": "200000000000000000000002",
+    "organizer": "100000000000000000000007",
+    "categories": [
+      "education",
+      "music",
+      "charity"
+    ]
+  },
+  {
+    "_id": "300000000000000000000003",
+    "title": "Startup Pitch Day",
+    "description": "A must-attend gathering bringing together industry leaders and enthusiasts.",
+    "startsAt": "2026-09-28T20:00:00.000Z",
+    "price": 5,
+    "venue": "200000000000000000000003",
+    "organizer": "100000000000000000000010",
+    "categories": [
+      "education",
+      "business"
+    ]
+  },
+  {
+    "_id": "300000000000000000000004",
+    "title": "Modern Art Exhibition",
+    "description": "A community event designed to inspire and educate attendees.",
+    "startsAt": "2026-12-18T20:00:00.000Z",
+    "price": 20,
+    "venue": "200000000000000000000004",
+    "organizer": "100000000000000000000013",
+    "categories": [
+      "food",
+      "fashion"
+    ]
+  },
+  {
+    "_id": "300000000000000000000005",
+    "title": "Culinary Masterclass",
+    "description": "Experience creativity and innovation like never before.",
+    "startsAt": "2026-11-08T18:00:00.000Z",
+    "price": 5,
+    "venue": "200000000000000000000005",
+    "organizer": "100000000000000000000016",
+    "categories": [
+      "science"
+    ]
+  },
+  {
+    "_id": "300000000000000000000006",
+    "title": "Indie Film Festival",
+    "description": "A must-attend gathering bringing together industry leaders and enthusiasts.",
+    "startsAt": "2026-09-25T18:00:00.000Z",
+    "price": 15,
+    "venue": "200000000000000000000006",
+    "organizer": "100000000000000000000019",
+    "categories": [
+      "networking",
+      "fashion",
+      "literature"
+    ]
+  },
+  {
+    "_id": "300000000000000000000007",
+    "title": "AI & Robotics Expo",
+    "description": "Experience creativity and innovation like never before.",
+    "startsAt": "2026-12-20T18:00:00.000Z",
+    "price": 20,
+    "venue": "200000000000000000000007",
+    "organizer": "100000000000000000000002",
+    "categories": [
+      "art",
+      "comedy"
+    ]
+  },
+  {
+    "_id": "300000000000000000000008",
+    "title": "Charity Gala Dinner",
+    "description": "An unforgettable evening filled with entertainment and connection.",
+    "startsAt": "2026-10-18T20:00:00.000Z",
+    "price": 20,
+    "venue": "200000000000000000000008",
+    "organizer": "100000000000000000000005",
+    "categories": [
+      "fashion",
+      "health"
+    ]
+  },
+  {
+    "_id": "300000000000000000000009",
+    "title": "Yoga & Wellness Retreat",
+    "description": "An unforgettable evening filled with entertainment and connection.",
+    "startsAt": "2026-12-03T19:00:00.000Z",
+    "price": 50,
+    "venue": "200000000000000000000009",
+    "organizer": "100000000000000000000008",
+    "categories": [
+      "art",
+      "health",
+      "education"
+    ]
+  },
+  {
+    "_id": "300000000000000000000010",
+    "title": "Stand-up Comedy Night",
+    "description": "A must-attend gathering bringing together industry leaders and enthusiasts.",
+    "startsAt": "2026-11-27T20:00:00.000Z",
+    "price": 15,
+    "venue": "200000000000000000000010",
+    "organizer": "100000000000000000000011",
+    "categories": [
+      "education",
+      "comedy"
+    ]
+  },
+  {
+    "_id": "300000000000000000000011",
+    "title": "Classical Music Concert",
+    "description": "A must-attend gathering bringing together industry leaders and enthusiasts.",
+    "startsAt": "2026-10-22T20:00:00.000Z",
+    "price": 15,
+    "venue": "200000000000000000000011",
+    "organizer": "100000000000000000000014",
+    "categories": [
+      "film"
+    ]
+  },
+  {
+    "_id": "300000000000000000000012",
+    "title": "Photography Workshop",
+    "description": "Celebrate culture and talent with performers from around the world.",
+    "startsAt": "2026-11-03T15:00:00.000Z",
+    "price": 50,
+    "venue": "200000000000000000000012",
+    "organizer": "100000000000000000000017",
+    "categories": [
+      "film",
+      "sports",
+      "literature"
+    ]
+  },
+  {
+    "_id": "300000000000000000000013",
+    "title": "Fashion Week Showcase",
+    "description": "Celebrate culture and talent with performers from around the world.",
+    "startsAt": "2026-09-18T19:00:00.000Z",
+    "price": 75,
+    "venue": "200000000000000000000013",
+    "organizer": "100000000000000000000020",
+    "categories": [
+      "education"
+    ]
+  },
+  {
+    "_id": "300000000000000000000014",
+    "title": "Book Author Meetup",
+    "description": "Join us for a day packed with insights, workshops, and networking.",
+    "startsAt": "2026-11-14T15:00:00.000Z",
+    "price": 15,
+    "venue": "200000000000000000000014",
+    "organizer": "100000000000000000000003",
+    "categories": [
+      "education",
+      "gaming",
+      "science"
+    ]
+  },
+  {
+    "_id": "300000000000000000000015",
+    "title": "Gaming Convention",
+    "description": "A must-attend gathering bringing together industry leaders and enthusiasts.",
+    "startsAt": "2026-11-03T18:00:00.000Z",
+    "price": 5,
+    "venue": "200000000000000000000015",
+    "organizer": "100000000000000000000006",
+    "categories": [
+      "literature"
+    ]
+  },
+  {
+    "_id": "300000000000000000000016",
+    "title": "Business Leadership Forum",
+    "description": "A community event designed to inspire and educate attendees.",
+    "startsAt": "2026-12-11T15:00:00.000Z",
+    "price": 5,
+    "venue": "200000000000000000000016",
+    "organizer": "100000000000000000000009",
+    "categories": [
+      "health"
+    ]
+  },
+  {
+    "_id": "300000000000000000000017",
+    "title": "Craft Beer Festival",
+    "description": "A community event designed to inspire and educate attendees.",
+    "startsAt": "2026-11-07T20:00:00.000Z",
+    "price": 0,
+    "venue": "200000000000000000000017",
+    "organizer": "100000000000000000000012",
+    "categories": [
+      "charity",
+      "science"
+    ]
+  },
+  {
+    "_id": "300000000000000000000018",
+    "title": "Science Fair Expo",
+    "description": "A must-attend gathering bringing together industry leaders and enthusiasts.",
+    "startsAt": "2026-11-22T20:00:00.000Z",
+    "price": 20,
+    "venue": "200000000000000000000018",
+    "organizer": "100000000000000000000015",
+    "categories": [
+      "food",
+      "education",
+      "charity"
+    ]
+  },
+  {
+    "_id": "300000000000000000000019",
+    "title": "Dance Performance Night",
+    "description": "A community event designed to inspire and educate attendees.",
+    "startsAt": "2026-09-01T20:00:00.000Z",
+    "price": 10,
+    "venue": "200000000000000000000019",
+    "organizer": "100000000000000000000018",
+    "categories": [
+      "health",
+      "science"
+    ]
+  },
+  {
+    "_id": "300000000000000000000020",
+    "title": "Marathon Kickoff Event",
+    "description": "An unforgettable evening filled with entertainment and connection.",
+    "startsAt": "2026-11-21T19:00:00.000Z",
+    "price": 25,
+    "venue": "200000000000000000000020",
+    "organizer": "100000000000000000000001",
+    "categories": [
+      "food",
+      "networking",
+      "gaming"
+    ]
+  },
+  {
+    "_id": "300000000000000000000021",
+    "title": "Digital Marketing Conference",
+    "description": "A community event designed to inspire and educate attendees.",
+    "startsAt": "2026-12-27T18:00:00.000Z",
+    "price": 25,
+    "venue": "200000000000000000000001",
+    "organizer": "100000000000000000000004",
+    "categories": [
+      "literature"
+    ]
+  },
+  {
+    "_id": "300000000000000000000022",
+    "title": "Blockchain & Web3 Summit",
+    "description": "Join us for a day packed with insights, workshops, and networking.",
+    "startsAt": "2026-12-28T20:00:00.000Z",
+    "price": 15,
+    "venue": "200000000000000000000002",
+    "organizer": "100000000000000000000007",
+    "categories": [
+      "music",
+      "food"
+    ]
+  },
+  {
+    "_id": "300000000000000000000023",
+    "title": "Poetry Slam Evening",
+    "description": "A must-attend gathering bringing together industry leaders and enthusiasts.",
+    "startsAt": "2026-12-22T18:00:00.000Z",
+    "price": 50,
+    "venue": "200000000000000000000003",
+    "organizer": "100000000000000000000010",
+    "categories": [
+      "comedy"
+    ]
+  },
+  {
+    "_id": "300000000000000000000024",
+    "title": "Food Truck Rally",
+    "description": "A community event designed to inspire and educate attendees.",
+    "startsAt": "2026-09-17T15:00:00.000Z",
+    "price": 10,
+    "venue": "200000000000000000000004",
+    "organizer": "100000000000000000000013",
+    "categories": [
+      "business"
+    ]
+  },
+  {
+    "_id": "300000000000000000000025",
+    "title": "Theater Play Premiere",
+    "description": "Celebrate culture and talent with performers from around the world.",
+    "startsAt": "2026-09-28T19:00:00.000Z",
+    "price": 20,
+    "venue": "200000000000000000000005",
+    "organizer": "100000000000000000000016",
+    "categories": [
+      "literature",
+      "gaming"
+    ]
+  }
+]

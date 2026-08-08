@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --env-file=.env --watch server.js",
+    "seed:import": "node --env-file=.env seeder.js --import",
+    "seed:delete": "node --env-file=.env seeder.js --delete"
   },
   "keywords": [],
   "author": "",
