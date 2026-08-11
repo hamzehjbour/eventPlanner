@@ -58,7 +58,9 @@ exports.getEvent = async (req, res, next) => {
   try {
     const { id } = req.params;
 
-    const event = await Event.findById(id).populate("organizer", "name");
+    const event = await Event.findById(id)
+      .populate("organizer", "name")
+      .populate("venue", "name address");
 
     if (!event) throw new AppError("No event with that ID", 404);
 

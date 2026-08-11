@@ -12,7 +12,10 @@ exports.getRegistrations = async (req, res, next) => {
 
     if (req.params.eventId) filter = { event: req.params.eventId };
 
-    const registrations = await Registrations.find(filter);
+    const registrations = await Registrations.find(filter).populate(
+      "user",
+      "name email",
+    );
 
     res.status(200).json({
       status: "success",

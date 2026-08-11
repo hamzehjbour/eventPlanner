@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
 
 const userRouter = require("./routes/userRoutes");
 const venueRouter = require("./routes/venueRoutes");
@@ -11,9 +12,13 @@ const globalErrorHandler = require("./controllers/errorController");
 
 const app = express();
 
+const allowedOrigins = ["http://localhost:5173"];
+
 app.use(morgan("dev"));
 
 app.use(express.json({ limit: "10kb" }));
+
+app.use(cors({ origin: allowedOrigins }));
 
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/venues", venueRouter);
