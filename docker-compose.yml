@@ -3,14 +3,26 @@ services:
     image: mongo:7
     restart: unless-stopped
     ports:
-      - "27017:27017" # optional — lets you connect Compass/mongosh from the host
+      - "27017:27017"
     volumes:
       - mongo_data:/data/db
     healthcheck:
       test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"]
-      interval: 5s
+      interval: 10s
       timeout: 5s
-      retries: 10
+      retries: 5
+      start_period: 10s
+
+  seed:
+    build:
+      context: ./backend
+    command: ["node", "seeder.js", "--import"]
+    environment:
+      DATABASE: mongodb://mongo:27017/event_planner_db
+    depends_on:
+      mongo:
+        condition: service_healthy
+    restart: "no"
 
   backend:
     build:
@@ -19,37 +31,23 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DATABASE=mongodb://mongo:27017/event_planner_db
-      - PORT=3000
+      DATABASE: mongodb://mongo:27017/event_planner_db
+      PORT: 3000
     depends_on:
-      mongo:
-        condition: service_healthy
-
-  # Not part of the normal `docker compose up` — a one-off job you run
-  # explicitly whenever you want to (re)seed the database. See usage below.
-  seed:
-    build:
-      context: ./backend
-    command: node seed.js --import
-    environment:
-      - MONGO_URI=mongodb://mongo:27017/event_planner_db
-    depends_on:
-      mongo:
-        condition: service_healthy
-    profiles: ["tools"]
+      seed:
+        condition: service_completed_successfully
 
   frontend:
     build:
       context: ./frontend
       args:
-        # Baked into the JS bundle at build time (Vite env vars aren't
-        # readable at container runtime — see note below).
-        VITE_API_BASE_URL: http://localhost:3000/api
+        VITE_API_BASE_URL: http://localhost:3000/api/v1
     restart: unless-stopped
     ports:
       - "8080:80"
     depends_on:
-      - backend
+      backend:
+        condition: service_started
 
 volumes:
   mongo_data:
