@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const User = require("./models/userModel");
 const Event = require("./models/eventModel");
 const Venue = require("./models/venueModel");
-const Registration = require("./models/registration");
+const Registration = require("./models/registrationModel");
 
 const DB = process.env.DATABASE;
 

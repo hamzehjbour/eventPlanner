@@ -1,7 +1,12 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
-import { getEvent, getEventAttendees } from "../api/eventApi";
+import {
+  getEvent,
+  getEventAttendees,
+  getUsers,
+  registerUser,
+} from "../api/eventApi";
 
 const route = useRoute();
 
@@ -10,12 +15,19 @@ const attendees = ref(null);
 const loading = ref(true);
 const error = ref(null);
 
+const users = ref([]);
+const selectedUser = ref("");
+const ticketCount = ref(1);
+
+const registering = ref(false);
+const registrationError = ref(null);
+const registrationSuccess = ref(false);
+
 const fetchEvent = async () => {
   try {
     const data = await getEvent(route.params.id);
     const eventAttendees = await getEventAttendees(route.params.id);
 
-    console.log(eventAttendees.data.registrations);
     event.value = data.data.event;
     attendees.value = eventAttendees.data.registrations;
   } catch (err) {
@@ -25,14 +37,51 @@ const fetchEvent = async () => {
   }
 };
 
-onMounted(() => fetchEvent());
+const fetchUsers = async () => {
+  try {
+    const data = await getUsers();
+
+    // console.log(data.data.users);
+    users.value = data.data.users;
+  } catch (err) {
+    registrationError.value = err.message;
+  }
+};
+
+const handleRegistration = async () => {
+  if (!selectedUser.value || ticketCount.value < 1) {
+    return;
+  }
+
+  try {
+    registering.value = true;
+    registrationError.value = null;
+    registrationSuccess.value = false;
+
+    await registerUser(route.params.id, selectedUser.value, ticketCount.value);
+
+    registrationSuccess.value = true;
+
+    selectedUser.value = "";
+    ticketCount.value = 1;
+
+    await fetchEvent();
+  } catch (err) {
+    registrationError.value = err.message;
+  } finally {
+    registering.value = false;
+  }
+};
+
+onMounted(() => {
+  fetchEvent();
+  fetchUsers();
+});
 </script>
 
 <template>
   <div class="event-details-page">
     <RouterLink to="/events" class="back-link"> ← Back to events </RouterLink>
-
-    <button class="btn-register">Register user</button>
 
     <p v-if="loading" class="status">Loading event...</p>
 
@@ -92,5 +141,47 @@ onMounted(() => fetchEvent());
         </div>
       </div>
     </article>
+
+    <div class="registration-section">
+      <h2>Register Attendee</h2>
+
+      <form @submit.prevent="handleRegistration">
+        <div class="form-group">
+          <label for="user">User</label>
+
+          <select id="user" v-model="selectedUser" required>
+            <option value="" disabled>Select a user</option>
+
+            <option v-for="user in users" :key="user._id" :value="user.name">
+              {{ user.name }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="tickets">Number of tickets</label>
+
+          <input
+            id="tickets"
+            v-model.number="ticketCount"
+            type="number"
+            min="1"
+            required
+          />
+        </div>
+
+        <button type="submit" :disabled="registering || !selectedUser">
+          {{ registering ? "Registering..." : "Register User" }}
+        </button>
+      </form>
+
+      <p v-if="registrationSuccess" class="success">
+        User registered successfully!
+      </p>
+
+      <p v-if="registrationError" class="error">
+        {{ registrationError }}
+      </p>
+    </div>
   </div>
 </template>

@@ -19,7 +19,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - MONGO_URI=mongodb://mongo:27017/event_planner_db
+      - DATABASE=mongodb://mongo:27017/event_planner_db
       - PORT=3000
     depends_on:
       mongo:

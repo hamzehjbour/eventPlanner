@@ -74,7 +74,6 @@ main {
 
 /* EVENT DETAILS */
 .event-details-page {
-  max-width: 900px;
   margin: 0 auto;
   padding: 30px 20px;
 }
@@ -176,6 +175,197 @@ main {
   border-top: 1px solid #eee;
 }
 
-.btn-register {
-  display: inline-block;
+/* REGISTRATION FORM */
+
+.registration-section {
+  margin-top: 30px;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.registration-section h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group select,
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.registration-section button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registration-section button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.success {
+  margin-top: 15px;
+  color: green;
+}
+
+.error {
+  margin-top: 15px;
+  color: #c62828;
+}
+
+/* CREATE EVENT FORM */
+
+.create-event-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.page-description {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group > label {
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 11px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.category-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal !important;
+  cursor: pointer;
+}
+
+.category-option input {
+  cursor: pointer;
+}
+
+.event-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #222;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.event-form button:hover {
+  background: #333;
+}
+
+.event-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 0;
+  color: #c62828;
+}
+
+.success {
+  margin: 0;
+  color: #2e7d32;
+}
+
+/* SEARCH */
+.event-search {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+}
+
+.search-field label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.search-field input,
+.search-field select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.event-search button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.event-search button:hover {
+  background: #333;
 }

@@ -34,6 +34,10 @@ exports.createRegistration = async (req, res, next) => {
     const { eventId } = req.params;
     const { user, ticketCount } = req.body;
 
+    console.log("eventId", eventId);
+
+    console.log("req body", req.body);
+
     const event = await Event.findById(req.params.eventId).populate(
       "venue",
       "name capacity",

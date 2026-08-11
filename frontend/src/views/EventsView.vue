@@ -3,17 +3,37 @@ import { onMounted, ref } from "vue";
 import { getEvents } from "../api/eventApi";
 
 const events = ref([]);
+const city = ref("");
+const category = ref("");
 const currentPage = ref(1);
 const totalPages = ref(1);
 const loading = ref(false);
 const error = ref(null);
+
+const categories = [
+  "sports",
+  "education",
+  "music",
+  "charity",
+  "food",
+  "fashion",
+  "health",
+  "networking",
+  "literature",
+  "art",
+  "comedy",
+  "science",
+  "business",
+  "film",
+  "gaming",
+];
 
 const fetchEvents = async (page = 1) => {
   try {
     loading.value = true;
     error.value = null;
 
-    const data = await getEvents(page);
+    const data = await getEvents(page, 10, city.value, category.value);
 
     events.value = data.data.events;
     currentPage.value = data.page;
@@ -23,6 +43,10 @@ const fetchEvents = async (page = 1) => {
   } finally {
     loading.value = false;
   }
+};
+
+const searchEvents = () => {
+  fetchEvents(1);
 };
 
 const nextPage = () => {
@@ -43,6 +67,37 @@ onMounted(() => fetchEvents());
 <template>
   <div class="events-page">
     <h1>Events</h1>
+
+    <div class="event-search">
+      <div class="search-field">
+        <label for="city">City</label>
+
+        <input
+          id="city"
+          v-model="city"
+          type="text"
+          placeholder="Search by city..."
+        />
+      </div>
+
+      <div class="search-field">
+        <label for="category">Category</label>
+
+        <select id="category" v-model="category">
+          <option value="">All categories</option>
+
+          <option
+            v-for="category in categories"
+            :key="category"
+            :value="category"
+          >
+            {{ category }}
+          </option>
+        </select>
+      </div>
+
+      <button @click="searchEvents">Search</button>
+    </div>
 
     <p v-if="loading">Loading...</p>
 
